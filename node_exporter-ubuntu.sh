@@ -4,9 +4,9 @@ useradd -M -r -s /bin/false node_exporter
 id node_exporter
 apt -y update
 apt -y install wget
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-tar xzf node_exporter-0.18.1.linux-amd64.tar.gz
-cp node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin/
+wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+tar xzf node_exporter-1.1.2.linux-amd64.tar.gz
+cp node_exporter-1.1.2.linux-amd64/node_exporter /usr/local/bin/
 chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
 cat > /etc/systemd/system/node_exporter.service << EOF
